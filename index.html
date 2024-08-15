@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji ID Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input[type="text"], select {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        input[readonly] {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Emoji ID Converter</h1>
+    <div>
+        <input type="text" id="emojiID" placeholder="Input your Emoji ID here">
+        <select id="fileType">
+            <option value="gif">gif</option>
+            <option value="webp">webp</option>
+        </select>
+        <button onclick="convertEmojiID()">Convert</button>
+        <input type="text" id="result" readonly>
+    </div>
+
+    <script>
+        function convertEmojiID() {
+            const emojiID = document.getElementById("emojiID").value;
+            const fileType = document.getElementById("fileType").value;
+
+            if (emojiID) {
+                const result = `https://cdn.discordapp.com/emojis/${emojiID}.${fileType}?size=48&name=duckass&quality=lossless`;
+                document.getElementById("result").value = result;
+            } else {
+                alert("Please input your Emoji ID.");
+            }
+        }
+    </script>
+
+</body>
+</html>

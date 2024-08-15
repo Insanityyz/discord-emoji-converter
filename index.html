@@ -41,7 +41,18 @@
         <input type="text" id="result" readonly>
     </div>
 
-    <h2>How to Enable Developer Mode on Discord</h2>
+    <h2>How to Get Emoji IDs on Discord (Without or With Developer Mode)</h2>
+
+    <h3>On Both Mobile and PC:</h3>
+    <ol>
+        <li>Ensure you are in the server that has the emoji you want to get the ID for.</li>
+        <li>In the chat box, type <code>\:youremojiname:</code>, replacing <strong>youremojiname</strong> with the name of the emoji.</li>
+        <li>Send the message. The ID of the emoji will appear in the chat as <code>\<emoji name:emoji ID></code>.</li>
+        <li>Copy the ID number from the message.</li>
+    </ol>
+    <p><strong>Note:</strong> This method only works if you are in the server that has the emoji. If you are not in the server, you won't be able to retrieve the emoji ID using this method.</p>
+
+    <h2>How to Enable Developer Mode on Discord (if you're unsure or if it doesn't work somehow)</h2>
 
     <h3>On Mobile:</h3>
     <ol>
@@ -58,23 +69,7 @@
         <li>Scroll down and select <strong>Advanced</strong> in the left sidebar.</li>
         <li>Toggle the <strong>Developer Mode</strong> switch to enable it.</li>
     </ol>
-
-    <h2>How to Get Emoji IDs on Discord</h2>
-
-    <h3>On Mobile:</h3>
-    <ol>
-        <li>Open the Discord app and navigate to a server where you can see the emoji you want to get the ID for.</li>
-        <li>Tap and hold on the emoji to bring up a menu.</li>
-        <li>Select <strong>Copy Emoji ID</strong> from the menu. (Ensure Developer Mode is enabled as described above.)</li>
-    </ol>
-
-    <h3>On PC:</h3>
-    <ol>
-        <li>Open Discord and go to a server where the emoji is used.</li>
-        <li>Click on the emoji to open the emoji picker.</li>
-        <li>Right-click on the emoji (or click on the three dots if visible) and select <strong>Copy ID</strong>. (Ensure Developer Mode is enabled as described above.)</li>
-    </ol>
-
+    
     <script>
         function convertEmojiID() {
             const emojiID = document.getElementById("emojiID").value;
